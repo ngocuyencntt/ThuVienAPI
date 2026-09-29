@@ -1,8 +1,11 @@
 ﻿using WebAPI_simple.Models.Domain;
+using System.ComponentModel.DataAnnotations;
 namespace WebAPI_simple.Models.DTO
 {
     public class addBookRequestDTO
     {
+        [Required]
+        [MinLength(10)]
         public string? Title { get; set; }
         public string? Description { get; set; }
         public bool IsRead { get; set; }
